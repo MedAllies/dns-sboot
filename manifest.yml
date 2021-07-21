@@ -1,0 +1,12 @@
+---
+applications:
+- name: dns-sboot
+  instances: 1
+  buildpack: java_buildpack
+  path: target/dns-sboot-6.0.1.jar
+  env: 
+    spring.cloud.config.label: master    
+  services:
+    - directhisp-config-server
+    - directhisp-eureka 
+    
